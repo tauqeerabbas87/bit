@@ -9,14 +9,12 @@ export const formatDate = (dateTime) => {
     if(dateTime_arr.length){
         const month = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
         const theDate = dateTime_arr[0].split('-');
-        debugger;
         return `${theDate[2]} ${month[parseInt(theDate[1], 10)]}, ${theDate[0]}`;
     }
     return dateTime_arr;
 };
 
 export const validateResponse = async (response) => {
-    debugger
     if (response.status !== 200) {
         return {
             responsePassed:false,

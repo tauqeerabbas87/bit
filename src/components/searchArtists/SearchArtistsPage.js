@@ -26,7 +26,7 @@ const SearchArtistsPage = (props) => {
 
     const getArtistDetails = async (searchFieldTerm) => {
         setSpinner(true);
-        const result = await fetchArtistByName(searchFieldTerm); debugger;
+        const result = await fetchArtistByName(searchFieldTerm);
         setSearchResult(result);
         setSpinner(false);
     };

@@ -26,16 +26,7 @@ const SearchArtistsPage = ({onSubmit}) => {
     };
 
     useEffect(()=>{
-        // const data = sessionStorage.getItem('searchFieldData');
-        // if(!!data){
-        //     setSearchField(data);
-        // } else {
-        //     sessionStorage.setItem('searchFieldData', searchField);
-        // }
-        // debugger;
-        // return ()=>{
-        //     debugger
-        // }
+
     });
 
     return (

@@ -28,14 +28,12 @@ const ArtistEventsPage = (props) => {
     const getEventsDetails = async (searchFieldTerm) => {
         setSpinner(true);
         const result = await fetchArtistEvents(searchFieldTerm);
-        debugger;
         setEventResult(result);
         setSpinner(false);
     };
 
     const getArtistDetails = async () => {
        const data = sessionStorage.getItem('search');
-       debugger
        if(!!data){
            const result = await JSON.parse(data);
            setArtistData(result.result.apiResponse);
