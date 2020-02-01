@@ -24,8 +24,8 @@ const SearchResults =  ({result}) => {
 
     return (
         <Container fixed>
-            <Typography variant="h4" noWrap>
-                {`Result found for ${result.name}`}
+            <Typography variant="h5" noWrap>
+                {`Result found for "${result.name}"`}
             </Typography>
             <Typography variant="body2" noWrap>
                 {`${result.name} has ${result.upcoming_event_count} upcoming events`}
@@ -48,6 +48,7 @@ const SearchResults =  ({result}) => {
                                 component="div"
                                 variant="h4"
                                 color="textPrimary"
+                                className={classes.textAlignment}
                             >
                                 {name}
                             </Typography>
@@ -62,6 +63,7 @@ const SearchResults =  ({result}) => {
                                 onClick={e=>e.stopPropagation()}
                                 target="_blank"
                                 href={facebook_page_url}
+                                className={classes.textAlignment}
                             >
                                 {facebook_page_url}
                             </Typography>

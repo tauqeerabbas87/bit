@@ -76,6 +76,7 @@ const ArtistEventsPage = (props) => {
                                 component="div"
                                 variant="h4"
                                 color="textPrimary"
+                                className={classes.textAlignment}
                             >
                                 {artistData.name}
                             </Typography>
@@ -88,6 +89,7 @@ const ArtistEventsPage = (props) => {
                                 onClick={e=>e.stopPropagation()}
                                 target="_blank"
                                 href={artistData.facebook_page_url}
+                                className={classes.textAlignment}
                             >
                                 {artistData.facebook_page_url}
                             </Typography>

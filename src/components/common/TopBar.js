@@ -41,7 +41,7 @@ const SearchArtistsPage = ({onSubmit}) => {
                         <LightTooltip title="Type and press enter or click on search icon">
                             <div>
                                 <InputBase
-                                    placeholder="Search…"
+                                    placeholder="Search artist"
                                     classes={{
                                         root: classes.inputRoot,
                                         input: classes.inputInput,

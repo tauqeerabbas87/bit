@@ -2,22 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b210115-d5bd-4fda-b114-ddc643d0ea8b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/context/initialState.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/context/reducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/app/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/artistEvents/ArtistEventsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/artistEvents/ArtistEventsPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/artistEvents/EventsListItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/artistEvents/EventsListItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/Spinner.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Spinner.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/artistEvents/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/artistEvents/styles.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/common/TopBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/TopBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/styles.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/searchArtists/SearchArtistsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/searchArtists/SearchArtistsPage.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/searchArtists/SearchResults.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/searchArtists/SearchResults.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/context/StoreContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/StoreContext.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/searchArtists/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/searchArtists/styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resources/theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/theme.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -81,7 +72,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1579720497137</updated>
-      <workItem from="1579720498305" duration="96225000" />
+      <workItem from="1579720498305" duration="98394000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit without routing">
       <created>1580386599579</created>
@@ -97,7 +88,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580386709666</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="useReducer and caching implemented">
+      <created>1580552615372</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1580552615372</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -117,6 +115,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="initial commit without routing" />
     <MESSAGE value="remove debugger" />
-    <option name="LAST_COMMIT_MESSAGE" value="remove debugger" />
+    <MESSAGE value="useReducer and caching implemented" />
+    <option name="LAST_COMMIT_MESSAGE" value="useReducer and caching implemented" />
   </component>
 </project>
