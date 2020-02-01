@@ -11,6 +11,7 @@ export const useAppBarStyles = makeStyles(theme => ({
         paddingLeft:theme.spacing(5),
         fontFamily:'inherit',
         textTransform:'uppercase',
+        cursor:'pointer',
         [theme.breakpoints.up('md')]: {
             paddingLeft:theme.spacing(4),
         },

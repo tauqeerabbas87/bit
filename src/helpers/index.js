@@ -6,10 +6,10 @@ export const validateTextOnly = (field) => {
 
 export const formatDate = (dateTime) => {
     const dateTime_arr = dateTime.indexOf('T') !== -1 ?dateTime.split('T') : null;
-    if(dateTime_arr.length){
+    if(!!dateTime_arr && dateTime_arr.length){
         const month = ['Jan','Feb','Mar','Apr','May','Jun','Jul','Aug','Sep','Oct','Nov','Dec'];
         const theDate = dateTime_arr[0].split('-');
-        return `${theDate[2]} ${month[parseInt(theDate[1], 10)]}, ${theDate[0]}`;
+        return `${theDate[2]} ${month[parseInt(theDate[1], 10)-1]}, ${theDate[0]}`;
     }
     return dateTime_arr;
 };
