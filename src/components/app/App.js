@@ -7,7 +7,7 @@ import SearchArtists from '../searchArtists/SearchArtistsPage';
 import ArtistEvents from '../artistEvents/ArtistEventsPage';
 import Page404 from './../common/Page404';
 import {StoreContext} from "../../context/StoreContext";
-
+//test
 const App = () => {
     const classes = appStyles();
     const {state, dispatch} = useContext(StoreContext);

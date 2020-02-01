@@ -31,7 +31,7 @@ const Page404 = (props) => {
                     color="textPrimary"
                     gutterBottom={true}
                 >
-                    404 Page Not Found
+                    404 Page Not Found Tauqeer
                 </Typography>
                 <Typography
                     component="h1"
