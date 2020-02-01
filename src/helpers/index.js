@@ -14,7 +14,7 @@ export const formatDate = (dateTime) => {
     return dateTime_arr;
 };
 
-export const validateResponse = async (response) => {
+export const validateResponse = async (response, query) => {
     if (response.status !== 200) {
         return {
             responsePassed:false,
@@ -27,12 +27,13 @@ export const validateResponse = async (response) => {
             parsedResult = {
                 apiResponse: parsedResult,
                 responsePassed:false,
-                errorMessage:`Result not found!`,
+                errorMessage:`Result not found!`
             }
         } else {
             parsedResult = {
                 apiResponse:parsedResult,
                 responsePassed:true,
+                query
             }
         }
         return parsedResult;

@@ -13,7 +13,14 @@ const SearchResults =  ({result}) => {
 
     const classes = useArtistListStyles();
     const {name, thumb_url, facebook_page_url} = result;
-    const {setPage} = useContext(StoreContext);
+    const {dispatch} = useContext(StoreContext);
+
+    const setEventsPage = () =>{
+        dispatch({
+            type:'PAGE',
+            payload:'events'
+        });
+    };
 
     return (
         <Container fixed>
@@ -28,9 +35,7 @@ const SearchResults =  ({result}) => {
                 <ListItem
                     alignItems="flex-start"
                     className={classes.artistListItem}
-                    onClick={()=>{
-                        setPage('events');
-                    }}>
+                    onClick={setEventsPage}>
                     <ListItemAvatar classes={{root:classes.avatarRoot}}>
                         <Avatar
                             alt={name}

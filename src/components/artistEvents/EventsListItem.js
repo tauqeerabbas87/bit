@@ -1,4 +1,4 @@
-import React, {useContext} from 'react';
+import React from 'react';
 import Typography from '@material-ui/core/Typography';
 import {useEventsListItemStyles} from './styles';
 import Grid from '@material-ui/core/Grid';
@@ -46,7 +46,7 @@ const EventsListItem =  ({event}) => {
 };
 
 EventsListItem.defaultProps = {
-    result : null
+    event : null
 };
 
 export default EventsListItem;

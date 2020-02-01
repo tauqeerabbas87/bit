@@ -1,18 +1,17 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useContext} from 'react';
 import { withSnackbar } from 'notistack';
 import TopBar from '../common/TopBar';
 import SearchResults from './SearchResults';
 import {fetchArtistByName } from '../../api';
-import useSearchArtistsPageStyles from './styles';
 import Spinner from './../common/Spinner';
 import {validateTextOnly} from './../../helpers/index';
 import Button from '@material-ui/core/Button';
+import {StoreContext} from "../../context/StoreContext";
 
 const SearchArtistsPage = (props) => {
 
-    const classes = useSearchArtistsPageStyles();
-    const [searchFieldTerm, setSearchFieldTerm] = useState('');
-    const [searchResult, setSearchResult] = useState(null);
+    const {state, dispatch} = useContext(StoreContext);
+    const {query, searchResult} = state;
     const [spinner, setSpinner] = useState(false);
 
     const snackbarOptions = {
@@ -24,18 +23,16 @@ const SearchArtistsPage = (props) => {
         )
     };
 
-    const getArtistDetails = async (searchFieldTerm) => {
+    const getArtistDetails = async () => {
         setSpinner(true);
-        const result = await fetchArtistByName(searchFieldTerm);
-        setSearchResult(result);
+        await fetchArtistByName(state, dispatch);
         setSpinner(false);
     };
 
-    const onFormSubmit = (term) => {
-        setSearchFieldTerm(term);
-        const validSearch = validateTextOnly(term);
+    const onFormSubmit = () => {
+        const validSearch = validateTextOnly(query);
         if(validSearch){
-            getArtistDetails(term);
+            getArtistDetails();
         } else {
             props.enqueueSnackbar("Please enter alphabets only", snackbarOptions);
         }
@@ -43,17 +40,17 @@ const SearchArtistsPage = (props) => {
     };
 
     useEffect(() => {
-        if(!!searchResult && searchResult.responsePassed === false){
+        if(!!searchResult && !!searchResult.responsePassed && searchResult.responsePassed === false){
             props.enqueueSnackbar(searchResult.errorMessage, snackbarOptions);
         }
-    }, [searchResult]);
+    }, [searchResult, snackbarOptions,props]);
 
     return (
         <>
             <TopBar onSubmit={onFormSubmit}/>
             {spinner ? <Spinner spin={spinner} /> : null }
 
-            {!!searchResult && !!searchResult.apiResponse && searchResult.responsePassed === true ?
+            {!!!!searchResult && !!searchResult.apiResponse && !!searchResult.responsePassed && searchResult.responsePassed === true ?
                 <SearchResults result={searchResult.apiResponse}/>
                 :
                 null

@@ -3,7 +3,8 @@ import { fade, makeStyles } from '@material-ui/core/styles';
 // 1. SearchBar Component Styles
 export const useAppBarStyles = makeStyles(theme => ({
     appBar:{
-        marginBottom:theme.spacing(4)
+        marginBottom:theme.spacing(4),
+        paddingBottom:theme.spacing(1)
     },
     title:{
         paddingTop:theme.spacing(1),
@@ -32,7 +33,6 @@ export const useAppBarStyles = makeStyles(theme => ({
             backgroundColor: fade(theme.palette.common.white, 0.25),
         },
         marginLeft: 0,
-        marginBottom:theme.spacing(1),
         width: '100%',
         [theme.breakpoints.up('sm')]: {
             width: 'auto',

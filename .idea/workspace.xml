@@ -2,32 +2,21 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b210115-d5bd-4fda-b114-ddc643d0ea8b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/api/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/app/App.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/app/styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/artistEvents/ArtistEventsPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/artistEvents/EventsListItem.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/artistEvents/styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/Spinner.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/ToolTip.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/TopBar.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/common/styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/searchArtists/SearchArtistsPage.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/searchArtists/SearchResults.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/searchArtists/styles.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/context/StoreContext.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/helpers/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resources/theme.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/context/initialState.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/context/reducer.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/App.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/logo.svg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/serviceWorker.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/serviceWorker.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/app/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/App.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/artistEvents/ArtistEventsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/artistEvents/ArtistEventsPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/artistEvents/EventsListItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/artistEvents/EventsListItem.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/Spinner.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Spinner.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/TopBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/TopBar.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/common/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/styles.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/searchArtists/SearchArtistsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/searchArtists/SearchArtistsPage.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/searchArtists/SearchResults.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/searchArtists/SearchResults.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/context/StoreContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/StoreContext.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/helpers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -92,8 +81,23 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1579720497137</updated>
-      <workItem from="1579720498305" duration="77611000" />
+      <workItem from="1579720498305" duration="96225000" />
     </task>
+    <task id="LOCAL-00001" summary="initial commit without routing">
+      <created>1580386599579</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1580386599580</updated>
+    </task>
+    <task id="LOCAL-00002" summary="remove debugger">
+      <created>1580386709666</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1580386709666</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -109,5 +113,10 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="initial commit without routing" />
+    <MESSAGE value="remove debugger" />
+    <option name="LAST_COMMIT_MESSAGE" value="remove debugger" />
   </component>
 </project>

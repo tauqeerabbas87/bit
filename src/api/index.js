@@ -4,51 +4,46 @@ export const APP_ID = "bandsintown";
 export const BASE_URL = 'https://rest.bandsintown.com';
 
 
-export const fetchArtistByName = async (query) => {
-    let result = null;
-    let parsedData = null;
-    const key = 'search';
-    let data = sessionStorage.getItem(key);
-    if(!!data){
-        parsedData = JSON.parse(data);
-    }
-    if(!!parsedData && parsedData.query === query){
-        return parsedData.result;
-    } else {
-        result = await fetch(`${BASE_URL}/artists/${query}?app_id=${APP_ID}`)
+export const fetchArtistByName = async (state, dispatch) => {
+    let {query, searchResult} = state;
+    if(!(!!searchResult && searchResult.query === query)) {
+        const result = await fetch(`${BASE_URL}/artists/${query}?app_id=${APP_ID}`)
             .then(response => {
-                return validateResponse(response);
+                return validateResponse(response,query);
             })
             .catch(err => {
                 return catchErrorResponse(err);
             });
-        sessionStorage.setItem(key, JSON.stringify({result, query}));
-        return result;
+
+        dispatch({
+            type:'SET_SEARCH_RESULT',
+            payload:{
+                result,
+                query
+            }
+        });
     }
-
-
+    return true;
 };
 
-export const fetchArtistEvents = async (query, date='upcoming') => {
-    let result = null;
-    let parsedData = null;
-    const key = 'events';
-    let data = sessionStorage.getItem(key);
-    if(!!data){
-        parsedData = JSON.parse(data);
-    }
-    if(!!parsedData && parsedData.query === query){
-        return parsedData.result;
-    } else{
-        result = await fetch(`${BASE_URL}/artists/${query}/events?app_id=${APP_ID}&date=${date}`)
+export const fetchArtistEvents = async (state, dispatch, date='upcoming') => {
+    let {query, eventsResult} = state;
+    if(!(!!eventsResult && eventsResult.query === query)) {
+        const result = await fetch(`${BASE_URL}/artists/${query}/events?app_id=${APP_ID}&date=${date}`)
             .then(response => {
-                return validateResponse(response);
+                return validateResponse(response,query);
             })
             .catch(err => {
                 return catchErrorResponse(err);
             });
-        sessionStorage.setItem(key, JSON.stringify({result, query}));
+        dispatch({
+            type:'SET_EVENTS_RESULT',
+            payload:{
+                result,
+                query
+            }
+        });
     }
 
-    return result;
+    return true;
 };

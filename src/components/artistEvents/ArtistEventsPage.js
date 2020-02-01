@@ -20,48 +20,48 @@ import Grid from "@material-ui/core/Grid";
 const ArtistEventsPage = (props) => {
 
     const classes = useArtistEventsPageStyles();
-    const {setPage, term, page} = useContext(StoreContext);
-    const [eventResult, setEventResult] = useState([]);
+
+    const {state, dispatch} = useContext(StoreContext);
+    const {page, searchResult, eventsResult} = state;
+    const artistData = !!searchResult && !!searchResult.apiResponse ? searchResult.apiResponse : null;
+
     const [spinner, setSpinner] = useState(false);
-    const [artistData, setArtistData] = useState(null);
 
-    const getEventsDetails = async (searchFieldTerm) => {
-        setSpinner(true);
-        const result = await fetchArtistEvents(searchFieldTerm);
-        setEventResult(result);
-        setSpinner(false);
-    };
-
-    const getArtistDetails = async () => {
-       const data = sessionStorage.getItem('search');
-       if(!!data){
-           const result = await JSON.parse(data);
-           setArtistData(result.result.apiResponse);
-       }
+    const setSearchPage = () =>{
+        dispatch({
+            type:'PAGE',
+            payload:'search'
+        });
     };
 
     useEffect(() => {
+
+        const getEventsDetails = async () => {
+            setSpinner(true);
+            await fetchArtistEvents(state, dispatch);
+            setSpinner(false);
+        };
+
         if(page === "events"){
-            getEventsDetails(term);
-            getArtistDetails();
+            getEventsDetails();
         }
-    }, [term, page]);
+    }, [page, eventsResult, state, dispatch]);
 
     return (
         <>
             <TopBar />
+
             {spinner ? <Spinner spin={spinner} /> : null }
+
             <Container fixed>
-            <Button onClick={()=>{
-                setPage('search');
-            }}>
-                <BackIcon/>
-                Back to results
-            </Button>
+                <Button onClick={setSearchPage}>
+                    <BackIcon/>
+                    Back to results
+                </Button>
 
             {!!artistData ? <>
                 <List className={classes.artistList}>
-                <ListItem
+                    <ListItem
                     alignItems="flex-start"
                     className={classes.artistListItem}>
                     <ListItemAvatar classes={{root:classes.avatarRoot}}>
@@ -94,7 +94,7 @@ const ArtistEventsPage = (props) => {
                         }
                     />
                 </ListItem>
-            </List>
+                </List>
                 <Typography
                     component="div"
                     variant="body1"
@@ -103,12 +103,11 @@ const ArtistEventsPage = (props) => {
                 >
                     {`${artistData.upcoming_event_count} upcoming events`}
                 </Typography>
-
-                {!!eventResult && !!eventResult.apiResponse && eventResult.apiResponse.length > 0 && eventResult.responsePassed === true ?
+                {!!eventsResult && !!eventsResult.apiResponse && eventsResult.apiResponse.length > 0 && !!eventsResult.responsePassed && eventsResult.responsePassed === true ?
                     <Grid container spacing={3}>
-                        { eventResult.apiResponse.map(item=>(
-                        <EventsListItem key={item.id} event={item}/>
-                    ))}
+                        { eventsResult.apiResponse.map(item=>(
+                            <EventsListItem key={item.id} event={item}/>
+                        ))}
                     </Grid>
                     :
                     null

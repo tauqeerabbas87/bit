@@ -1,4 +1,4 @@
-import React, {useContext, useState, useEffect} from 'react';
+import React, {useContext} from 'react';
 import { Container, AppBar, Typography, InputBase } from '@material-ui/core';
 import SearchIcon from '@material-ui/icons/Search';
 import QueueMusic from '@material-ui/icons/QueueMusic';
@@ -9,25 +9,25 @@ import {StoreContext} from "../../context/StoreContext";
 const SearchArtistsPage = ({onSubmit}) => {
     const classes = useAppBarStyles();
 
-    const {setTerm, page} = useContext(StoreContext);
+    const {state, dispatch} = useContext(StoreContext);
+    const {page, query} = state;
 
-    // 1. Set search field value
-    const [searchField, setSearchField] = useState('');
+    const setQuery = (query='')=>{
+        dispatch({
+            type:'QUERY',
+            payload:query
+        });
+    };
 
     const onFormSubmit = (event) => {
         event.preventDefault();
-        setTerm(searchField);
-        sessionStorage.setItem('searchFieldData', searchField);
-        onSubmit(searchField);
+        setQuery(query);
+        onSubmit();
     };
 
     const onChangeHandler = (event) => {
-        setSearchField(event.target.value);
+        setQuery(event.target.value);
     };
-
-    useEffect(()=>{
-
-    });
 
     return (
         <AppBar position="static" className={classes.appBar}>
@@ -46,7 +46,7 @@ const SearchArtistsPage = ({onSubmit}) => {
                                         root: classes.inputRoot,
                                         input: classes.inputInput,
                                     }}
-                                    value={searchField}
+                                    value={query}
                                     autoFocus={true}
                                     inputProps={{ 'aria-label': 'search' }}
                                     onChange={onChangeHandler}
