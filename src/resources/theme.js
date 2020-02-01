@@ -4,6 +4,7 @@ import red from '@material-ui/core/colors/green';
 
 const insideTheme = createMuiTheme();
 
+// Theme customization
 export default createMuiTheme({
     palette: {
         primary: indigo,

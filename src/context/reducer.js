@@ -1,3 +1,7 @@
+/*
+* REDUCER used for
+* APPLICATION STORE
+*/
 export default (state, action) => {
     switch (action.type) {
         case 'PAGE':

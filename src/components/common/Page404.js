@@ -1,16 +1,15 @@
 import React, {useContext} from 'react';
-import { withSnackbar } from 'notistack';
+import {Button, Container, Typography} from "@material-ui/core";
 import {StoreContext} from "../../context/StoreContext";
 import TopBar from '../common/TopBar';
-import Button from '@material-ui/core/Button';
 import BackIcon from '@material-ui/icons/KeyboardArrowLeft';
-import Typography from "@material-ui/core/Typography";
-import {Container} from "@material-ui/core";
 
 const Page404 = (props) => {
 
+    //Destructing dispatch action from STORE CONTEXT
     const {dispatch} = useContext(StoreContext);
 
+    // Redirect to "search artist" PAGE
     const setSearchPage = () =>{
         document.location.href = "/";
         dispatch({
@@ -21,8 +20,10 @@ const Page404 = (props) => {
 
     return (
         <>
+            {/*header TopBar component*/}
             <TopBar />
 
+            {/*component layout container*/}
             <Container fixed>
                 <Typography
                     component="h1"
@@ -40,6 +41,8 @@ const Page404 = (props) => {
                 >
                     The page your are looking for does not exists!
                 </Typography>
+
+                {/*Button to redirect to "Search Artist PAGE "*/}
                 <Button onClick={setSearchPage} variant="contained" color="primary" size="large">
                     <BackIcon/>
                     Go to search artist page
@@ -50,4 +53,4 @@ const Page404 = (props) => {
     );
 };
 
-export default withSnackbar(Page404);
+export default Page404;

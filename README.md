@@ -1,68 +1,75 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This application is hosted on Netlify at [https://bandsintown.netlify.com/](https://bandsintown.netlify.com/)
+## BANDSINTOWN
 
-## Available Scripts
+This project is built using:
+1. Git Repository
+2. SPA with Create-react-app
+3. Styling with Material-ui 
+4. Responsive Web Design
+5. React Hooks
+6. Context API
+7. Session Storage
+8. Progressive Web Application
+9. Unit Tests with Jest
+10. Netlify for CI/CD
 
-In the project directory, you can run:
+### `Source Directory Structure (Src)`
+**src** has 5 directories 
+1. **api** - contains App ID, Base URL and async funtions to api's
+2. **components** - contains all components, has 4 main sub directories
+    1. **app** - contains app component
+    2. **artistEvent** - contains *Artist's Event* related components. Component ends with Page.js is the mail component in the directory.
+    3. **common** - common contains common/reusable components e.g. spinner, tooltip, top bar in header etc.
+    4. **searchArtists** - contains components related to search artist.
+3. **context** - contains application's initial state, reducer and context provider.
+4. **helpers** - contains helper methods that can be utilized anywhere in the application.
+5. **resources** - contains static resources like theme, images, css, fonts etc.
 
-### `yarn start`
+### Git Repository
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Project is setup on a public repository. The url to clone is [https://github.com/tauqeerabbas87/bit.git](https://github.com/tauqeerabbas87/bit.git)
+It has two branches, **master**, **dev**. Master is the main branch that is actually deployed on the server. And Dev is the development branch.
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+If you want to run application locally, clone the application from above url and in the console run 
+#### `yarn start` 
+It will run the app in the development mode. Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+The page will reload if you make edits. You will also see any lint errors in the console.
 
-### `yarn test`
 
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### SPA with Create-react-app
 
-### `yarn build`
+I choose react, as I have experience of more than two years in working in it.
 
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Styling with Material-ui
 
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
+[Material-ui](https://material-ui.com/) is one of the most popular UI library with built-in collection of components. 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### Responsive Web Design
 
-### `yarn eject`
+This application is fully responsive.
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### React Hooks & Context API
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+I choose to develop using React Hooks and Context API as I have not worked on it yet. So, by making this application, I have also added new skills to my toolkit.
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Session Storage (Cache Last API results)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+Session storage is used for storing compete state of the application, so that it can be cached for last APIs.
 
-## Learn More
+Secondly, it should also maintain the state with last data, if user refreshes the page. I have used Session Storage over local storage, because the api's response can be updated over time. Their is a less probability that events data is updated for last api in for the current session. As the data removes when the tab is closed in session storage.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Progressive Web Application
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+This application can be installed/Displayed as app on the following
+ 1. Desktop chrome browser's app section
+ 2. Android home screen (as an app)
+ 3. IOS home screen (as an app)
+ 
+ The pages that have been visited will be cached, the static resources will be cached, the last API calls are already being cached. So, if a user has visited some pages and her internet is disconnected, user will still be able to navigate and view the last results.
 
-### Code Splitting
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
+### Unit Tests with Jest
 
-### Analyzing the Bundle Size
+### Netlify for CI/CD
 
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `yarn build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+This application is hosted on Netlify. Whenever a pull request will be successfully merged into **master** branch at Git, the auto deployment on Netlify will start and the complete log for success/failure will be displayed in the deployment section on Netlify website.

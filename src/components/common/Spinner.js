@@ -1,6 +1,5 @@
 import React from 'react';
-import CircularProgress from '@material-ui/core/CircularProgress';
-import Backdrop from '@material-ui/core/Backdrop';
+import {CircularProgress, Backdrop} from '@material-ui/core';
 import {useSpinnerStyles} from './styles';
 
 const Spinner = ({spin}) => {

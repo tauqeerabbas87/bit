@@ -1,9 +1,18 @@
-
+/*
+* Function to validate
+* Search Text Field contains only Text
+*/
 export const validateTextOnly = (field) => {
     const pattern = /^[A-Za-z\s]+$/;
     return !!field.match(pattern);
 };
 
+
+
+/*
+* Extract Date for display
+* Extract DATE from date time api response
+*/
 export const formatDate = (dateTime) => {
     const dateTime_arr = dateTime.indexOf('T') !== -1 ?dateTime.split('T') : null;
     if(!!dateTime_arr && dateTime_arr.length){
@@ -14,6 +23,13 @@ export const formatDate = (dateTime) => {
     return dateTime_arr;
 };
 
+
+
+/*
+* Generic function for
+* API RESPONSE VALIDATION and returns the object
+* after parsing into JSON
+*/
 export const validateResponse = async (response, query) => {
     if (response.status !== 200) {
         return {
@@ -41,6 +57,12 @@ export const validateResponse = async (response, query) => {
     }
 };
 
+
+
+/*
+* Generic function for
+* API RESPONSE CATCH section error message
+*/
 export const catchErrorResponse = (err) => {
     return {
         responsePassed:false,

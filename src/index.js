@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './components/app/App';
-import * as serviceWorker from './serviceWorker';
-import { SnackbarProvider } from 'notistack';
-import StoreContextProvider from "./context/StoreContext";
+import * as serviceWorker from './serviceWorker'; // PWA
+import { SnackbarProvider } from 'notistack'; // For notifications
+import StoreContextProvider from "./context/StoreContext"; // Context API for this Application
 
 ReactDOM.render(
     <StoreContextProvider>
@@ -16,4 +16,4 @@ ReactDOM.render(
 // If you want your app to work offline and load faster, you can change
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
-serviceWorker.unregister();
+serviceWorker.register();
