@@ -7,25 +7,26 @@ import SearchArtists from '../searchArtists/SearchArtistsPage';
 import ArtistEvents from '../artistEvents/ArtistEventsPage';
 import Page404 from './../common/Page404';
 import {StoreContext} from "../../context/StoreContext";
-//test
+
 const App = () => {
     const classes = appStyles();
     const {state, dispatch} = useContext(StoreContext);
     const {page} = state;
 
-    const set404Page = () =>{
-        dispatch({
-            type:'PAGE',
-            payload:'404'
-        });
-    };
-
     useEffect(()=>{
+
+        const set404Page = () =>{
+            dispatch({
+                type:'PAGE',
+                payload:'404'
+            });
+        };
+
         if(document.location.href !== `${document.location.origin}/` && document.location.pathname.split('/').pop() !== '404'){
             document.location.href = "404";
             set404Page();
         }
-    },[]);
+    },[dispatch]);
 
   return (
       <>

@@ -1,4 +1,4 @@
-import React, {useState, useEffect, useContext} from 'react';
+import React, {useContext} from 'react';
 import { withSnackbar } from 'notistack';
 import {StoreContext} from "../../context/StoreContext";
 import TopBar from '../common/TopBar';
@@ -9,8 +9,7 @@ import {Container} from "@material-ui/core";
 
 const Page404 = (props) => {
 
-    const {state, dispatch} = useContext(StoreContext);
-    const {searchResult, eventsResult} = state;
+    const {dispatch} = useContext(StoreContext);
 
     const setSearchPage = () =>{
         document.location.href = "/";
@@ -31,7 +30,7 @@ const Page404 = (props) => {
                     color="textPrimary"
                     gutterBottom={true}
                 >
-                    404 Page Not Found Tauqeer
+                    404 Page Not Found
                 </Typography>
                 <Typography
                     component="h1"
