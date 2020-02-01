@@ -1,22 +1,40 @@
-import React, {useContext} from 'react';
+import React, {useContext, useEffect} from 'react';
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { ThemeProvider } from '@material-ui/core/styles';
 import theme from './../../resources/theme';
 import appStyles from './styles';
 import SearchArtists from '../searchArtists/SearchArtistsPage';
 import ArtistEvents from '../artistEvents/ArtistEventsPage';
+import Page404 from './../common/Page404';
 import {StoreContext} from "../../context/StoreContext";
 
 const App = () => {
     const classes = appStyles();
-    const {state} = useContext(StoreContext);
+    const {state, dispatch} = useContext(StoreContext);
+    const {page} = state;
+
+    const set404Page = () =>{
+        dispatch({
+            type:'PAGE',
+            payload:'404'
+        });
+    };
+
+    useEffect(()=>{
+        if(document.location.href !== `${document.location.origin}/` && document.location.pathname.split('/').pop() !== '404'){
+            document.location.href = "404";
+            set404Page();
+        }
+    },[]);
+
   return (
       <>
           <ThemeProvider theme={theme}>
           <CssBaseline/>
             <div className={classes.App}>
-
-                    {state.page === "search" ?
+                {page === '404' ? <Page404 /> :
+                    <>
+                    {page === "search" ?
                         <>
                             <div><SearchArtists/> </div>
                             <div className={classes.hidden}><ArtistEvents/> </div>
@@ -27,6 +45,8 @@ const App = () => {
                             <div><ArtistEvents/> </div>
                         </>
                     }
+                    </>
+                }
             </div>
           </ThemeProvider>
           </>
