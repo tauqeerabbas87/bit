@@ -6,7 +6,7 @@ import { LightTooltip } from './ToolTip';
 import {useAppBarStyles} from './styles';
 import {StoreContext} from "../../context/StoreContext";
 
-const SearchArtistsPage = ({onSubmit}) => {
+const TopBar = ({onSubmit}) => {
     const classes = useAppBarStyles();
 
     const {state, dispatch} = useContext(StoreContext);
@@ -16,6 +16,13 @@ const SearchArtistsPage = ({onSubmit}) => {
         dispatch({
             type:'QUERY',
             payload:query
+        });
+    };
+
+    const setSearchPage = ()=>{
+        dispatch({
+            type:'PAGE',
+            payload:'search'
         });
     };
 
@@ -33,8 +40,8 @@ const SearchArtistsPage = ({onSubmit}) => {
         <AppBar position="static" className={classes.appBar}>
 
                 <Container fixed className={classes.posRel}>
-                <Typography className={classes.title} variant="h5" noWrap>
-                    <QueueMusic className={classes.bandIcon}/>Bandsintown
+                <Typography className={classes.title} variant="h5" onClick={setSearchPage}  noWrap>
+                    <QueueMusic className={classes.bandIcon}/>Bandsintown Tauqeer
                 </Typography>
                     {page ==="search"?
                         <form onSubmit={onFormSubmit} className={classes.searchForm}>
@@ -65,4 +72,4 @@ const SearchArtistsPage = ({onSubmit}) => {
     );
 };
 
-export default SearchArtistsPage;
+export default TopBar;
