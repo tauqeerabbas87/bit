@@ -15,6 +15,9 @@ const App = () => {
 
     useEffect(()=>{
 
+        //Function to dispatch action for the
+        // APPLICATION STORE REDUCER
+        // to redirect on 404 page
         const set404Page = () =>{
             dispatch({
                 type:'PAGE',
@@ -22,6 +25,8 @@ const App = () => {
             });
         };
 
+        //Condition to verify if the browser url is other than the origin with /
+        // if so, user will be redirected to 404 page
         if(document.location.href !== `${document.location.origin}/` && document.location.pathname.split('/').pop() !== '404'){
             document.location.href = "404";
             set404Page();
@@ -33,8 +38,11 @@ const App = () => {
           <ThemeProvider theme={theme}>
           <CssBaseline/>
             <div className={classes.App}>
+                {/*On component render if url is not valid,
+                user will be redirected to 404 */}
                 {page === '404' ? <Page404 /> :
                     <>
+                    {/*Check If PAGE is search Artist or Events of Artists*/}
                     {page === "search" ?
                         <>
                             <div><SearchArtists/> </div>

@@ -11,10 +11,16 @@ import {StoreContext} from "./../../context/StoreContext";
 
 const SearchResults =  ({result}) => {
 
+    // STYLE object created
     const classes = useArtistListStyles();
+
+    // Destructuring Artist details from result props
     const {name, thumb_url, facebook_page_url} = result;
+
+    // Destructuring DISPATCH from STORE CONTEXT
     const {dispatch} = useContext(StoreContext);
 
+    // Redirect to Events List PAGE
     const setEventsPage = () =>{
         dispatch({
             type:'PAGE',
@@ -32,6 +38,8 @@ const SearchResults =  ({result}) => {
             </Typography>
 
             <List className={classes.artistList}>
+                {/* THE API RESPONSE IS GIVING ONLY SINGLE USER DETAILS, NOT A LIST OF USERS
+                So, I am not using a loop to display a list, Although I have created UI for list. */}
                 <ListItem
                     alignItems="flex-start"
                     className={classes.artistListItem}

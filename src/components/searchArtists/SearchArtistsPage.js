@@ -10,10 +10,17 @@ import {StoreContext} from "../../context/StoreContext";
 
 const SearchArtistsPage = (props) => {
 
+    // Destructuring APPLICATION STATE AND DIPATCH method
     const {state, dispatch} = useContext(StoreContext);
+
+    // Destructuring search query and last search result from
+    //APPLICATION STATE
     const {query, searchResult} = state;
+
+    // Component state for show/hide spinner while API call
     const [spinner, setSpinner] = useState(false);
 
+    // Common Object for notifications
     const snackbarOptions = {
         variant: 'error',
         action: key =>(
@@ -23,12 +30,16 @@ const SearchArtistsPage = (props) => {
         )
     };
 
+    // Async function to fetch artist details
     const getArtistDetails = async () => {
         setSpinner(true);
         await fetchArtistByName(state, dispatch);
         setSpinner(false);
     };
 
+    // OnForm Submit from TopBar component
+    // this function validate input value and
+    //request for artist details
     const onFormSubmit = () => {
         const validSearch = validateTextOnly(query);
         if(validSearch){
@@ -40,6 +51,7 @@ const SearchArtistsPage = (props) => {
     };
 
     useEffect(() => {
+        //Check if their is an error in API response
         if(!!searchResult && !!searchResult.responsePassed && searchResult.responsePassed === false){
             props.enqueueSnackbar(searchResult.errorMessage, snackbarOptions);
         }
@@ -47,9 +59,13 @@ const SearchArtistsPage = (props) => {
 
     return (
         <>
+            {/*header TopBar component*/}
             <TopBar onSubmit={onFormSubmit}/>
+
+            {/*Spinner component for async work*/}
             {spinner ? <Spinner spin={spinner} /> : null }
 
+            {/*Check if searchResult is not empty*/}
             {!!!!searchResult && !!searchResult.apiResponse && !!searchResult.responsePassed && searchResult.responsePassed === true ?
                 <SearchResults result={searchResult.apiResponse}/>
                 :

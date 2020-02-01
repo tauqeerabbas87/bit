@@ -1,10 +1,9 @@
 import React from 'react';
-import Typography from '@material-ui/core/Typography';
+import {Grid, Paper, Typography} from '@material-ui/core';
 import {useEventsListItemStyles} from './styles';
-import Grid from '@material-ui/core/Grid';
-import Paper from '@material-ui/core/Paper';
 import {formatDate} from './../../helpers';
 
+//This component displays a single event details
 const EventsListItem =  ({event}) => {
 
     const classes = useEventsListItemStyles();

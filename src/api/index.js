@@ -1,9 +1,18 @@
+// Importing Helper functions that can be used throughout application
 import {validateResponse, catchErrorResponse} from './../helpers/index';
 
+//Application APP_ID for API and URL
 export const APP_ID = "bandsintown";
 export const BASE_URL = 'https://rest.bandsintown.com';
 
 
+/*
+* API CALL
+* FETCH ARTIST BY NAME
+* AND
+* DISPATCH THE RESPONSE INTO THE REDUCER
+* WHICH WILL UPDATE THE STORE OBJECT IN SESSION STORAGE
+*/
 export const fetchArtistByName = async (state, dispatch) => {
     let {query, searchResult} = state;
     if(!(!!searchResult && searchResult.query === query)) {
@@ -26,6 +35,15 @@ export const fetchArtistByName = async (state, dispatch) => {
     return true;
 };
 
+
+
+/*
+* API CALL
+* FETCH ARTIST'S UPCOMING EVENTS
+* AND
+* DISPATCH THE RESPONSE INTO THE REDUCER
+* WHICH WILL UPDATE THE STORE OBJECT IN SESSION STORAGE
+*/
 export const fetchArtistEvents = async (state, dispatch, date='upcoming') => {
     let {query, eventsResult} = state;
     if(!(!!eventsResult && eventsResult.query === query)) {
