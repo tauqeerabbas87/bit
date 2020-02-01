@@ -41,7 +41,7 @@ const TopBar = ({onSubmit}) => {
 
                 <Container fixed className={classes.posRel}>
                 <Typography className={classes.title} variant="h5" onClick={setSearchPage}  noWrap>
-                    <QueueMusic className={classes.bandIcon}/>Bandsintown Abbas
+                    <QueueMusic className={classes.bandIcon}/>Bandsintown Tauqeer Abbas
                 </Typography>
                     {page ==="search"?
                         <form onSubmit={onFormSubmit} className={classes.searchForm}>
