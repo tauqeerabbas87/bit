@@ -33,8 +33,11 @@ const SearchArtistsPage = (props) => {
     // Async function to fetch artist details
     const getArtistDetails = async () => {
         setSpinner(true);
-        await fetchArtistByName(state, dispatch);
+        const result = await fetchArtistByName(state, dispatch);
         setSpinner(false);
+        if(!!result && result.responsePassed === false){
+            props.enqueueSnackbar(result.errorMessage, snackbarOptions);
+        }
     };
 
     // OnForm Submit from TopBar component

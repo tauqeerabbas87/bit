@@ -3,23 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4b210115-d5bd-4fda-b114-ddc643d0ea8b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/app/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/app/styles.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/styles.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/artistEvents/ArtistEventsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/artistEvents/ArtistEventsPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/artistEvents/EventsListItem.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/artistEvents/EventsListItem.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/Page404.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Page404.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/Spinner.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/Spinner.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/common/TopBar.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/common/TopBar.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/searchArtists/SearchArtistsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/searchArtists/SearchArtistsPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/searchArtists/SearchResults.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/searchArtists/SearchResults.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/context/StoreContext.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/StoreContext.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/context/initialState.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/initialState.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/context/reducer.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/context/reducer.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resources/theme.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/resources/theme.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -44,17 +28,21 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1WlO1EzMTfcqCrqeiuwps7P1gNg" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/components/artistEvents" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="yarn" />
     <property name="ts.external.directory.path" value="C:\Program Files\JetBrains\WebStorm 2019.2.3\plugins\JavaScriptLanguage\jsLanguageServicesImpl\external" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\KeepTruckin\bandsintown\public" />
       <recent name="D:\KeepTruckin\bandsintown\src\components\artistEvents" />
       <recent name="D:\KeepTruckin\bandsintown\src\components\SearchArtists" />
       <recent name="D:\KeepTruckin\bandsintown\src\components\ArtistEvents" />
@@ -88,7 +76,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1579720497137</updated>
-      <workItem from="1579720498305" duration="117664000" />
+      <workItem from="1579720498305" duration="129938000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit without routing">
       <created>1580386599579</created>
@@ -174,7 +162,28 @@
       <option name="project" value="LOCAL" />
       <updated>1580570361964</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="md file updated">
+      <created>1580588752407</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1580588752407</updated>
+    </task>
+    <task id="LOCAL-00014" summary="Notification implementation complete">
+      <created>1580672263854</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1580672263854</updated>
+    </task>
+    <task id="LOCAL-00015" summary="work complete">
+      <created>1580676591130</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1580676591130</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,6 +201,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="initial commit without routing" />
     <MESSAGE value="remove debugger" />
     <MESSAGE value="useReducer and caching implemented" />
@@ -202,6 +212,9 @@
     <MESSAGE value="PWA complete" />
     <MESSAGE value="test PWA offline mode" />
     <MESSAGE value="test deployment for master only" />
-    <option name="LAST_COMMIT_MESSAGE" value="test deployment for master only" />
+    <MESSAGE value="md file updated" />
+    <MESSAGE value="Notification implementation complete" />
+    <MESSAGE value="work complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="work complete" />
   </component>
 </project>

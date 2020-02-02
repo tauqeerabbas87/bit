@@ -35,7 +35,8 @@ export const validateResponse = async (response, query) => {
         return {
             responsePassed:false,
             errorMessage:`Looks like there was a problem. Status Code: ${response.status}`,
-            response
+            response,
+            query
         }
     } else{
         let parsedResult = await response.json();
@@ -43,7 +44,8 @@ export const validateResponse = async (response, query) => {
             parsedResult = {
                 apiResponse: parsedResult,
                 responsePassed:false,
-                errorMessage:`Result not found!`
+                errorMessage:`Result not found!`,
+                query
             }
         } else {
             parsedResult = {
