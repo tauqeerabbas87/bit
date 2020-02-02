@@ -2,15 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4b210115-d5bd-4fda-b114-ddc643d0ea8b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/public/mobile_audit.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/api/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/api/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/app/App.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/app/App.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/artistEvents/ArtistEventsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/artistEvents/ArtistEventsPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/searchArtists/SearchArtistsPage.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/searchArtists/SearchArtistsPage.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/helpers/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/helpers/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/app/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/setupTests.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/setupTests.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -36,8 +31,11 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1WlO1EzMTfcqCrqeiuwps7P1gNg" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/public" />
@@ -81,7 +79,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1579720497137</updated>
-      <workItem from="1579720498305" duration="124423000" />
+      <workItem from="1579720498305" duration="128723000" />
     </task>
     <task id="LOCAL-00001" summary="initial commit without routing">
       <created>1580386599579</created>
@@ -174,7 +172,14 @@
       <option name="project" value="LOCAL" />
       <updated>1580588752407</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Notification implementation complete">
+      <created>1580672263854</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1580672263854</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -192,6 +197,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="initial commit without routing" />
     <MESSAGE value="remove debugger" />
     <MESSAGE value="useReducer and caching implemented" />
@@ -203,6 +209,7 @@
     <MESSAGE value="test PWA offline mode" />
     <MESSAGE value="test deployment for master only" />
     <MESSAGE value="md file updated" />
-    <option name="LAST_COMMIT_MESSAGE" value="md file updated" />
+    <MESSAGE value="Notification implementation complete" />
+    <option name="LAST_COMMIT_MESSAGE" value="Notification implementation complete" />
   </component>
 </project>
