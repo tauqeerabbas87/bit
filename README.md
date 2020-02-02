@@ -37,7 +37,7 @@ The page will reload if you make edits. You will also see any lint errors in the
 
 ### SPA with Create-react-app
 
-I choose react, as I have experience of more than two years in working in it.
+I choose react, as I have experience of more than two years in working in it. This is an SPA, I have not added routing, so the url will not change, but if user adds any other url, it will redirect to 404 page.
 
 ### Styling with Material-ui
 
