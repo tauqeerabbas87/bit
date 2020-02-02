@@ -15,8 +15,9 @@ export const BASE_URL = 'https://rest.bandsintown.com';
 */
 export const fetchArtistByName = async (state, dispatch) => {
     let {query, searchResult} = state;
+    let result = null;
     if(!(!!searchResult && searchResult.query === query)) {
-        const result = await fetch(`${BASE_URL}/artists/${query}?app_id=${APP_ID}`)
+        result = await fetch(`${BASE_URL}/artists/${query}?app_id=${APP_ID}`)
             .then(response => {
                 return validateResponse(response,query);
             })
@@ -31,8 +32,15 @@ export const fetchArtistByName = async (state, dispatch) => {
                 query
             }
         });
+    } else if(searchResult.apiResponse === ""){
+        result = {
+            apiResponse: searchResult.apiResponse,
+            responsePassed:false,
+            errorMessage:`Result not found!`,
+            query
+        }
     }
-    return true;
+    return result;
 };
 
 
@@ -46,8 +54,9 @@ export const fetchArtistByName = async (state, dispatch) => {
 */
 export const fetchArtistEvents = async (state, dispatch, date='upcoming') => {
     let {query, eventsResult} = state;
+    let result = null;
     if(!(!!eventsResult && eventsResult.query === query)) {
-        const result = await fetch(`${BASE_URL}/artists/${query}/events?app_id=${APP_ID}&date=${date}`)
+        result = await fetch(`${BASE_URL}/artists/${query}/events?app_id=${APP_ID}&date=${date}`)
             .then(response => {
                 return validateResponse(response,query);
             })
@@ -61,7 +70,14 @@ export const fetchArtistEvents = async (state, dispatch, date='upcoming') => {
                 query
             }
         });
+    } else if(eventsResult.apiResponse === ""){
+        result = {
+            apiResponse: eventsResult.apiResponse,
+            responsePassed:false,
+            errorMessage:`Result not found!`,
+            query
+        }
     }
 
-    return true;
+    return result;
 };

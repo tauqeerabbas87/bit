@@ -67,9 +67,16 @@ This application can be installed/Displayed as app on the following
  
  The pages that have been visited will be cached, the static resources will be cached, the last API calls are already being cached. So, if a user has visited some pages and her internet is disconnected, user will still be able to navigate and view the last results.
 
+I have performed the chrome audit for mobile and the result are satisfactory.
+![alt text](./public/mobile_audit.png "Logo Title Text 1")
+
 
 ### Unit Tests with Jest
 
 ### Netlify for CI/CD
 
-This application is hosted on Netlify. Whenever a pull request will be successfully merged into **master** branch at Git, the auto deployment on Netlify will start and the complete log for success/failure will be displayed in the deployment section on Netlify website.
+This application is hosted on Netlify. Whenever a pull request will be successfully merged into **master** branch at Git, auto deployment process on Netlify will start.
+ 
+ First it will create a build from src folder and then deploy the build folder on the hosting site.
+ 
+ The complete log for success/failure will be displayed in the deployment section on Netlify user panel.

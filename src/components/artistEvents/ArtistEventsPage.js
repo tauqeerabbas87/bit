@@ -36,6 +36,7 @@ const ArtistEventsPage = (props) => {
 
     // Component state for show/hide spinner while API call
     const [spinner, setSpinner] = useState(false);
+    const [apiResponseFlag, setApiResponseFlag] = useState(true);
 
     // Action to dispatch a "Redirect to Search Artist's page"
     const setSearchPage = () =>{
@@ -47,18 +48,32 @@ const ArtistEventsPage = (props) => {
 
     useEffect(() => {
 
+        // Common Object for notifications
+        const snackbarOptions = {
+            variant: 'error',
+            action: key =>(
+                <Button onClick={() => { props.closeSnackbar(key) }}>
+                    Dismiss
+                </Button>
+            )
+        };
+
         // Async function to fetch artist events data
         const getEventsDetails = async () => {
             setSpinner(true);
-            await fetchArtistEvents(state, dispatch);
+            const result = await fetchArtistEvents(state, dispatch);
             setSpinner(false);
+            if(!!result && result.responsePassed === false){
+                setApiResponseFlag(false);
+                props.enqueueSnackbar(result.errorMessage.message, snackbarOptions);
+            }
         };
 
         // Check if current PAGE is "events detail" or "Search artist"
-        if(page === "events"){
+        if(page === "events" && apiResponseFlag){
             getEventsDetails();
         }
-    }, [page, eventsResult, state, dispatch]);
+    }, [page, eventsResult, state, dispatch, apiResponseFlag]);
 
     return (
         <>
