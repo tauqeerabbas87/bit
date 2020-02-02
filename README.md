@@ -10,8 +10,7 @@ This project is built using:
 6. Context API
 7. Session Storage
 8. Progressive Web Application
-9. Unit Tests with Jest
-10. Netlify for CI/CD
+9. Netlify for CI/CD
 
 ### `Source Directory Structure (Src)`
 **src** has 5 directories 
@@ -69,9 +68,6 @@ This application can be installed/Displayed as app on the following
 
 I have performed the chrome audit for mobile and the result are satisfactory.
 ![alt text](./public/mobile_audit.png "Logo Title Text 1")
-
-
-### Unit Tests with Jest
 
 ### Netlify for CI/CD
 
