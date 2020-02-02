@@ -73,7 +73,7 @@ const ArtistEventsPage = (props) => {
         if(page === "events" && apiResponseFlag){
             getEventsDetails();
         }
-    }, [page, eventsResult, state, dispatch, apiResponseFlag]);
+    }, [page, eventsResult, state, dispatch, apiResponseFlag, props]);
 
     return (
         <>
